@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery Draw</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="container">
+      <h2>🎉 Lottery Draw 🎉</h2>
+      <p class="instruction">Enter names separated by commas:</p>
+      <textarea
+        id="nameInput"
+        placeholder="e.g. Rahim, Karim, Shafiq"
+      ></textarea>
+      <p class="alert">**Please enter at least two names separated by commas</p>
+      <button id="drawBtn">Draw Winner</button>
+      <div class="names-preview" id="namesPreview"></div>
+      <div class="spinner" id="spinner"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="winnerModal">
+      <div class="modal-content">
+        <h2>🎊 Congratulations! 🎊</h2>
+        <p id="winnerName" style="font-size: 1.4rem; font-weight: bold"></p>
+        <button class="close-btn" id="closeModal">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
