@@ -40,3 +40,44 @@ The layout adapts seamlessly to all screen sizes:
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/shibgatUAM/lottery-draw.git
+
+2. Open the index.html file in your browser.
+
+3. Type multiple names (comma or line separated) into the input field.
+
+4. Click "Pick Winner".
+
+5. Enjoy the spin animation and confetti when the winner appears!
+
+---
+
+🧠 Example Input
+John, Sarah, Alex, Emily, Michael
+
+---
+
+🎬 Demo (Optional)
+[lottery-draw](https://lottery-draw-suam.vercel.app/)
+
+---
+
+🧑‍💻 Author
+
+SHIBGAT ULLAH AL MAHMUD
+💼 Full-Stack Web Developer
+
+---
+
+🪄 Future Improvements
+
+- Add background music during the spin
+
+- Save previous winners using localStorage
+
+- Dark/light theme toggle
+
+---
+
+📜 License
+
+This project is open-source under the MIT License — feel free to use and modify it for your own projects.
