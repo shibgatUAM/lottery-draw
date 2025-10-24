@@ -89,9 +89,41 @@ drawBtn.addEventListener('click', () => {
     .filter((n) => n);
 
   if (names.length < 2) {
-    alert('Please enter  at least two names separated by commas.');
+    alert('Please enter at least two names separated by commas.');
     return;
   }
 
   // console.log(names);
+
+  // Spin animation simulation
+  spinner.textContent = '';
+  let counter = 0;
+
+  const spinInterval = setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    spinner.textContent = names[randomIndex];
+    counter++;
+  }, 100);
+
+  // stop after few seconds and show winner
+  setTimeout(() => {
+    clearInterval(spinInterval);
+
+    const winner = names[Math.floor(Math.random() * names.length)];
+    spinner.textContent = '';
+    winnerName.textContent = winner;
+    winnerModal.classList.add('active');
+    startConfetti();
+  }, 3000);
+});
+
+closeModal.addEventListener('click', () => {
+  winnerModal.classList.remove('active');
+});
+
+// close modal when clicking outside
+window.addEventListener('click', (e) => {
+  if (e.target === winnerModal) {
+    winnerModal.classList.remove('active');
+  }
 });
