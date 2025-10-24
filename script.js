@@ -69,3 +69,29 @@ function startConfetti() {
   };
   animate();
 }
+
+// Live preview of entered names
+namesInput.addEventListener('input', () => {
+  const names = namesInput.value
+    .split(', ')
+    .map((n) => n.trim())
+    .filter((n) => n);
+
+  namesPreview.textContent = names.length
+    ? `Total names entered: ${names.length}`
+    : '';
+});
+
+drawBtn.addEventListener('click', () => {
+  const names = namesInput.value
+    .split(', ')
+    .map((n) => n.trim())
+    .filter((n) => n);
+
+  if (names.length < 2) {
+    alert('Please enter  at least two names separated by commas.');
+    return;
+  }
+
+  // console.log(names);
+});
